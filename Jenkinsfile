@@ -9,6 +9,11 @@ pipeline {
         timestamps()
     }
     stages {
+        stage("First") {
+            steps {
+                sh 'whoami'
+            }
+        }
         stage("Get updates") {
             steps {
                 sh '/usr/bin/sudo /usr/bin/apt update'
