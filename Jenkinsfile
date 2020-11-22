@@ -16,7 +16,7 @@ pipeline {
         }
         stage("Get updates") {
             steps {
-                sh '/usr/bin/sudo /usr/bin/apt update'
+                sh '/usr/bin/sudo -S /usr/bin/apt update'
             }
         }
         stage("Setup nginx") {
