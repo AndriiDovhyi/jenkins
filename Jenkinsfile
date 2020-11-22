@@ -21,7 +21,7 @@ pipeline {
         }
         stage("Setup nginx") {
             steps {
-                sh '/usr/bin/sudo /usr/bin/apt intall nginx -y'
+                sh '/usr/bin/sudo /usr/bin/apt install nginx -y'
             }
         }
         stage("Start nginx") {
