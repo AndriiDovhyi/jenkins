@@ -11,22 +11,22 @@ pipeline {
     stages {
         stage("Get updates") {
             steps {
-                sh 'sudo apt update'
+                sh '/usr/bin/sudo /usr/bin/apt update'
             }
         }
         stage("Setup nginx") {
             steps {
-                sh 'sudo apt intall nginx -y'
+                sh '/usr/bin/sudo /usr/bin/apt intall nginx -y'
             }
         }
         stage("Start nginx") {
             steps {
-                sh 'sudo systemctl start nginx'
+                sh '/usr/bin/sudo /bin/systemctl start nginx'
             }
         }
        stage("Chech if running nginx") {
             steps {
-                sh 'sudo systemctl status nginx'
+                sh '/usr/bin/sudo /bin/systemctl status nginx'
             }
         }
     }
